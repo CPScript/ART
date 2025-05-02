@@ -1,14 +1,12 @@
-# NAME: Advanced ASCII Art Rendering Toolkit
+# ART: ASCII Rendering Toolkit
 
 <p align="center">
-<img src="https://img.shields.io/badge/version-0.7.0-blue.svg" alt="Version 0.7.0"/>
 <img src="https://img.shields.io/badge/python-3.7%2B-green.svg" alt="Python 3.7+"/>
-<img src="https://img.shields.io/badge/license-MIT-orange.svg" alt="License: MIT"/>
 </p>
 
 ## Enterprise Architecture Overview
 
-NAME implements a sophisticated framework for high-fidelity image-to-ASCII transformation with advanced rendering capabilities. This enterprise-grade toolkit provides comprehensive terminal graphics rendering with fine-grained parameter control, extensive customization options, and optimized I/O handling for integration into complex processing pipelines.
+"ART" implements a sophisticated framework for high-fidelity image-to-ASCII transformation with advanced rendering capabilities. This enterprise-grade toolkit provides comprehensive terminal graphics rendering with fine-grained parameter control, extensive customization options, and optimized I/O handling for integration into complex processing pipelines.
 
 ### Core Technology Stack
 
@@ -23,14 +21,14 @@ NAME implements a sophisticated framework for high-fidelity image-to-ASCII trans
 ### Standard Implementation
 
 ```bash
-pip install NAME
+pip install ART
 ```
 
 ### Development Implementation
 
 ```bash
-git clone https://github.com/CPScript/NAME
-cd NAME
+git clone https://github.com/CPScript/ART
+cd ART
 pip install -e .
 ```
 
@@ -47,21 +45,21 @@ pip install -e .
 
 ```bash
 # Basic implementation with default parameters
-NAME image.jpg
+ART image.jpg
 
 # Enhanced rendering with color preservation
-NAME image.jpg -u
+ART image.jpg -u
 
 # Enterprise-grade rendering with optimized parameters
-NAME image.jpg -c " .:-=+*#%@" -s 2 -w 80 -H 40 -u -r -b "40,40,40" --filter lanczos
+ART image.jpg -c " .:-=+*#%@" -s 2 -w 80 -H 40 -u -r -b "40,40,40" --filter lanczos
 ```
 
 ## Command-Line Protocol Specification
 
-The NAME command-line interface implements a comprehensive parameter architecture for maximum rendering control:
+The ART command-line interface implements a comprehensive parameter architecture for maximum rendering control:
 
 ```
-NAME [OPTIONS] [IMAGE_PATH]
+ART [OPTIONS] [IMAGE_PATH]
 ```
 
 ### Positional Parameters
@@ -93,64 +91,64 @@ The symbol set determines the character-to-intensity mapping protocol:
 
 ```bash
 # Binary implementation (high contrast)
-NAME image.jpg -c " #"
+ART image.jpg -c " #"
 
 # Grayscale implementation (standard density)
-NAME image.jpg -c " .:-=+*#%@"
+ART image.jpg -c " .:-=+*#%@"
 
 # Extended implementation (maximum fidelity)
-NAME image.jpg -c " .'`^\",:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
+ART image.jpg -c " .'`^\",:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 ```
 
 #### Dimension Control Architecture
 
-NAME implements multiple strategies for dimension management:
+ART implements multiple strategies for dimension management:
 
 ```bash
 # Scale-based implementation (factor of 2 reduction)
-NAME image.jpg -s 2
+ART image.jpg -s 2
 
 # Width-constrained implementation (height auto-scaled)
-NAME image.jpg -w 80
+ART image.jpg -w 80
 
 # Fixed-dimension implementation
-NAME image.jpg -w 120 -H 60
+ART image.jpg -w 120 -H 60
 
 # Terminal-optimized implementation
-NAME image.jpg -w $(tput cols) -H $(( $(tput lines) - 2 ))
+ART image.jpg -w $(tput cols) -H $(( $(tput lines) - 2 ))
 ```
 
 #### Color Management Architecture
 
 ```bash
 # Standard color implementation
-NAME image.jpg -u
+ART image.jpg -u
 
 # Background color implementation
-NAME image.jpg -u -b "255,200,180"
+ART image.jpg -u -b "255,200,180"
 
 # Color plane inversion implementation
-NAME image.jpg -u -r
+ART image.jpg -u -r
 
 # Complete color control implementation
-NAME image.jpg -u -r -b "#E0E0FF"
+ART image.jpg -u -r -b "#E0E0FF"
 ```
 
 #### Resampling Architecture Selection
 
 ```bash
 # Performance-optimized implementation
-NAME image.jpg --filter nearest
+ART image.jpg --filter nearest
 
 # Quality-optimized implementation
-NAME image.jpg --filter lanczos
+ART image.jpg --filter lanczos
 ```
 
-# Enterprise-Level Implementation Guide: Solid Block Character Rendering in NAME
+# Enterprise-Level Implementation Guide: Solid Block Character Rendering in ART
 
 ## Technical Implementation Architecture
 
-To implement solid square/block character rendering in NAME, you need to leverage the symbol set customization capabilities via the `-c/--symbols` parameter. This parameter accepts a string of characters that will be mapped to pixel intensity values during the ASCII transformation process.
+To implement solid square/block character rendering in ART, you need to leverage the symbol set customization capabilities via the `-c/--symbols` parameter. This parameter accepts a string of characters that will be mapped to pixel intensity values during the ASCII transformation process.
 
 ## Block Character Implementation Specification
 
@@ -171,7 +169,7 @@ The Unicode specification provides several block characters designed specificall
 To render the image using only full blocks (filled squares):
 
 ```bash
-NAME image.jpg -c "█"
+ART image.jpg -c "█"
 ```
 
 This creates a high-contrast rendering where every character is a solid block, with color preservation if the `-u` flag is enabled.
@@ -181,7 +179,7 @@ This creates a high-contrast rendering where every character is a solid block, w
 For a grayscale-like effect using block density:
 
 ```bash
-NAME image.jpg -c " ░▒▓█"
+ART image.jpg -c " ░▒▓█"
 ```
 
 This implementation maps pixel intensity to progressively denser block characters, creating a gradient effect with five distinct levels.
@@ -189,7 +187,7 @@ This implementation maps pixel intensity to progressively denser block character
 ### 3. Solid Block with Color Implementation (Maximum Fidelity)
 
 ```bash
-NAME image.jpg -c "█" -u
+ART image.jpg -c "█" -u
 ```
 
 This enterprise-grade implementation combines solid block characters with ANSI color preservation, creating a pixel-perfect terminal rendering at the character cell resolution.
@@ -199,7 +197,7 @@ This enterprise-grade implementation combines solid block characters with ANSI c
 ### 1. Inverted Block Rendering
 
 ```bash
-NAME image.jpg -c "█" -u -r -b "0,0,0"
+ART image.jpg -c "█" -u -r -b "0,0,0"
 ```
 
 This implementation renders solid blocks with inverted color planes against a black background, maximizing contrast and visibility.
@@ -207,7 +205,7 @@ This implementation renders solid blocks with inverted color planes against a bl
 ### 2. Terminal-Optimized Block Rendering
 
 ```bash
-NAME image.jpg -c "█" -u -w $(tput cols) -H $(( $(tput lines) - 2 ))
+ART image.jpg -c "█" -u -w $(tput cols) -H $(( $(tput lines) - 2 ))
 ```
 
 This implementation dynamically adapts the block rendering to the current terminal dimensions, ensuring optimal display characteristics.
@@ -217,7 +215,7 @@ This implementation dynamically adapts the block rendering to the current termin
 For terminals supporting Unicode, you can leverage half-block characters to effectively double the vertical resolution:
 
 ```bash
-NAME image.jpg -c "▀▄█" -u -s 2
+ART image.jpg -c "▀▄█" -u -s 2
 ```
 
 This advanced implementation uses upper half-block (▀), lower half-block (▄), and full block (█) characters to create higher-resolution renderings within terminal constraints.
@@ -237,34 +235,34 @@ The solid block implementation pattern offers several performance advantages:
 
 ```bash
 # Basic solid block rendering
-NAME photo.jpg -c "█"
+ART photo.jpg -c "█"
 
 # Color-preserving solid block rendering
-NAME photo.jpg -c "█" -u
+ART photo.jpg -c "█" -u
 
 # Gradient block rendering with color
-NAME photo.jpg -c " ░▒▓█" -u
+ART photo.jpg -c " ░▒▓█" -u
 ```
 
 ### Enterprise-Grade Block Rendering
 
 ```bash
 # Maximum-resolution block rendering with color preservation
-NAME high_res_image.jpg -c "█" -u -s 1 --filter lanczos
+ART high_res_image.jpg -c "█" -u -s 1 --filter lanczos
 
 # Memory-optimized block rendering
-NAME large_image.jpg -c "█" -u -s 6 --filter nearest
+ART large_image.jpg -c "█" -u -s 6 --filter nearest
 ```
 
-This comprehensive implementation guide provides the technical foundation for leveraging solid block characters in NAME, enabling pixel-accurate terminal graphics rendering with optimal performance characteristics.
+This comprehensive implementation guide provides the technical foundation for leveraging solid block characters in ART, enabling pixel-accurate terminal graphics rendering with optimal performance characteristics.
 
 ## Programmatic Implementation Architecture
 
-NAME can be integrated into advanced processing pipelines via its Python API:
+ART can be integrated into advanced processing pipelines via its Python API:
 
 ```python
 from PIL import Image
-from NAME import Config, Symbols, COLORS, REVERSE, convert_image_to_ascii
+from ART import Config, Symbols, COLORS, REVERSE, convert_image_to_ascii
 import sys
 
 # Configuration implementation
@@ -287,7 +285,7 @@ For sophisticated integration scenarios:
 
 ```python
 from PIL import Image
-from NAME import Config, Symbols, COLORS, TextImage, convert_image_to_ascii
+from ART import Config, Symbols, COLORS, TextImage, convert_image_to_ascii
 
 # Configuration protocol
 config = Config(symbols=Symbols(list(" .:-=+*#%@")), flags=COLORS)
@@ -310,10 +308,10 @@ print(text_image)
 
 ```bash
 # Process image data from stdin
-cat image.jpg | NAME -u > output.txt
+cat image.jpg | ART -u > output.txt
 
 # Multi-stage transformation pipeline
-convert image.jpg -resize 50% -colorspace gray jpg:- | NAME -c " .:-=+*#%@" > output.txt
+convert image.jpg -resize 50% -colorspace gray jpg:- | ART -c " .:-=+*#%@" > output.txt
 ```
 
 ### Batch Processing Protocol
@@ -322,7 +320,7 @@ convert image.jpg -resize 50% -colorspace gray jpg:- | NAME -c " .:-=+*#%@" > ou
 # Enterprise batch processing implementation
 for img in *.jpg; do
     output_file="${img%.jpg}.txt"
-    NAME "$img" -u -s 4 > "$output_file"
+    ART "$img" -u -s 4 > "$output_file"
 done
 ```
 
@@ -348,8 +346,8 @@ done
 
 ```bash
 # Development environment initialization
-git clone https://github.com/yourusername/NAME.git
-cd NAME
+git clone https://github.com/youruserART/ART.git
+cd ART
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -e ".[dev]"
